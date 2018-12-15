@@ -85,7 +85,7 @@
 	<category label="Trakt Settings">
 		<setting type="lsep" label="Save Trakt Data:"/>
 		<setting id="keeptrakt" type="bool" label="Keep My Trakt Data" default="false"/>
-        <setting id="13clowns" type="text" label="13Clowns:" enable="false" default=""/>
+        <setting id="13clowns" type="text" label="$NUMBER[13]Clowns:" enable="false" default=""/>
         <setting id="exodusredux" type="text" label="Exodus Redux: " enable="false" default=""/>
         <setting id="gaia" type="text" label="Gaia: " enable="false" default=""/>
 		<setting id="placenta" type="text" label="Placenta: " enable="false" default=""/>
@@ -120,7 +120,7 @@
 		<setting id="api-placenta" type="text" label="Placenta: " enable="false" default=""/>
 		<setting id="api-gaia" type="text" label="Gaia: " enable="false" default=""/>
 		<setting id="api-exodusredux" type="text" label="Exodus Redux: " enable="false" default=""/>
-		<setting id="api-13clowns" type="text" label="13Clowns:" enable="false" default=""/>
+		<setting id="api-13clowns" type="text" label="$NUMBER[13]Clowns:" enable="false" default=""/>
         <setting id="api-zanni" type="text" label="Zanni:" enable="false" default=""/>
 		<setting id="api-magicality" type="text" label="Magicality: " enable="false" default=""/>
 		<setting id="api-eis" type="text" label="ExtendedInfo Script: " enable="false" default=""/>
