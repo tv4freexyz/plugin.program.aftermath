@@ -1391,7 +1391,11 @@ def backUpOptions(type, name=""):
 					(os.path.join(ADDOND, 'plugin.video.gaia', 'meta.db')),
 					(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
 					(os.path.join(ADDOND, 'plugin.video.seren', 'providers.db')),
-					(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))]
+					(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db')),
+					(os.path.join(ADDOND, 'script.module.inputstreamhelper')),
+					(os.path.join(ADDONS, 'script.module.inputstreamhelper')),
+					(os.path.join(ADDOND, 'inputstream.adaptive')),
+					(os.path.join(ADDONS, 'inputstream.adaptive'))]
 
 	backup   = xbmc.translatePath(BACKUPLOCATION)
 	mybuilds = xbmc.translatePath(MYBUILDS)
