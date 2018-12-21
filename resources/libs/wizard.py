@@ -502,7 +502,7 @@ def getCacheSize():
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'cache.providers.13.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db')),
-        (os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
+		(os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
 	cachelist = [
 		(ADDOND),
 		(os.path.join(HOME,'cache')),
@@ -511,29 +511,29 @@ def getCacheSize():
 		(os.path.join('/private/var/mobile/Library/Caches/AppleTV/Video/', 'LocalAndRental')),
 		(os.path.join(ADDOND,'script.module.simple.downloader')),
 		(os.path.join(ADDOND,'plugin.video.itv','Images')),
-        (os.path.join(ADDOND, 'script.extendedinfo', 'images')),
-        (os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
-        (os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
-        (os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
-        (os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
-        (os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
-        (os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache')),
-        (os.path.join(ADDOND, 'plugin.program.autocompletion', 'Google')),
-        (os.path.join(ADDOND, 'plugin.program.autocompletion', 'Bing')),
-        (os.path.join(ADDOND, 'plugin.video.openmeta', '.storage'))]
+		(os.path.join(ADDOND, 'script.extendedinfo', 'images')),
+		(os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
+		(os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
+		(os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
+		(os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
+		(os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
+		(os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache')),
+		(os.path.join(ADDOND, 'plugin.program.autocompletion', 'Google')),
+		(os.path.join(ADDOND, 'plugin.program.autocompletion', 'Bing')),
+		(os.path.join(ADDOND, 'plugin.video.openmeta', '.storage'))]
 	if not PROFILEADDONDATA == ADDOND:
 		cachelist.append(os.path.join(PROFILEADDONDATA,'script.module.simple.downloader'))
 		cachelist.append(os.path.join(PROFILEADDONDATA,'plugin.video.itv','Images'))
-        cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'images'))
-        cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
-        cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
-        cachelist.append(os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
-        cachelist.append(os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
-        cachelist.append(os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
-        cachelist.append(os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache')),
-        cachelist.append(os.path.join(ADDOND, 'plugin.program.autocompletion', 'Google')),
-        cachelist.append(os.path.join(ADDOND, 'plugin.program.autocompletion', 'Bing')),
-        cachelist.append(os.path.join(ADDOND, 'plugin.video.openmeta', '.storage'))
+		cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'images'))
+		cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
+		cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
+		cachelist.append(os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
+		cachelist.append(os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
+		cachelist.append(os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
+		cachelist.append(os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache')),
+		cachelist.append(os.path.join(ADDOND, 'plugin.program.autocompletion', 'Google')),
+		cachelist.append(os.path.join(ADDOND, 'plugin.program.autocompletion', 'Bing')),
+		cachelist.append(os.path.join(ADDOND, 'plugin.video.openmeta', '.storage')),
 		cachelist.append(PROFILEADDONDATA)
 
 	totalsize = 0
@@ -1410,7 +1410,7 @@ def backUpOptions(type, name=""):
 					(os.path.join(ADDOND, 'plugin.video.gaia', 'meta.db')),
 					(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
 					(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db')),
-                    (os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
+					(os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
 
 	backup   = xbmc.translatePath(BACKUPLOCATION)
 	mybuilds = xbmc.translatePath(MYBUILDS)
@@ -2324,7 +2324,7 @@ def clearCache(over=None):
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'cache.providers.13.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db')),
-        (os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
+		(os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
 
 	cachelist = [
 		(PROFILEADDONDATA),
@@ -2337,16 +2337,16 @@ def clearCache(over=None):
 		(os.path.join(ADDOND,'plugin.video.itv','Images')),
 		(os.path.join(PROFILEADDONDATA,'script.module.simple.downloader')),
 		(os.path.join(PROFILEADDONDATA,'plugin.video.itv','Images')),
-        (os.path.join(ADDOND, 'script.extendedinfo', 'images')),
-        (os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
-        (os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
-        (os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
-        (os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
-        (os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
-        (os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache')),
-        (os.path.join(ADDOND, 'plugin.program.autocompletion', 'Google')),
-        (os.path.join(ADDOND, 'plugin.program.autocompletion', 'Bing')),
-        (os.path.join(ADDOND, 'plugin.video.openmeta', '.storage'))]
+		(os.path.join(ADDOND, 'script.extendedinfo', 'images')),
+		(os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
+		(os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
+		(os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
+		(os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
+		(os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
+		(os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache')),
+		(os.path.join(ADDOND, 'plugin.program.autocompletion', 'Google')),
+		(os.path.join(ADDOND, 'plugin.program.autocompletion', 'Bing')),
+		(os.path.join(ADDOND, 'plugin.video.openmeta', '.storage'))]
 
 	delfiles = 0
 	excludes = ['meta_cache', 'archive_cache']
