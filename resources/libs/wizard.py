@@ -510,10 +510,24 @@ def getCacheSize():
 		(os.path.join('/private/var/mobile/Library/Caches/AppleTV/Video/', 'Other')),
 		(os.path.join('/private/var/mobile/Library/Caches/AppleTV/Video/', 'LocalAndRental')),
 		(os.path.join(ADDOND,'script.module.simple.downloader')),
-		(os.path.join(ADDOND,'plugin.video.itv','Images'))]
+		(os.path.join(ADDOND,'plugin.video.itv','Images')),
+        (os.path.join(ADDOND, 'script.extendedinfo', 'images')),
+        (os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
+        (os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
+        (os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
+        (os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
+        (os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
+        (os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache'))]
 	if not PROFILEADDONDATA == ADDOND:
 		cachelist.append(os.path.join(PROFILEADDONDATA,'script.module.simple.downloader'))
 		cachelist.append(os.path.join(PROFILEADDONDATA,'plugin.video.itv','Images'))
+        cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'images'))
+        cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
+        cachelist.append(os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
+        cachelist.append(os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
+        cachelist.append(os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
+        cachelist.append(os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
+        cachelist.append(os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache'))
 		cachelist.append(PROFILEADDONDATA)
 
 	totalsize = 0
@@ -2316,7 +2330,14 @@ def clearCache(over=None):
 		(os.path.join(ADDOND,'script.module.simple.downloader')),
 		(os.path.join(ADDOND,'plugin.video.itv','Images')),
 		(os.path.join(PROFILEADDONDATA,'script.module.simple.downloader')),
-		(os.path.join(PROFILEADDONDATA,'plugin.video.itv','Images'))]
+		(os.path.join(PROFILEADDONDATA,'plugin.video.itv','Images')),
+        (os.path.join(ADDOND, 'script.extendedinfo', 'images')),
+        (os.path.join(ADDOND, 'script.extendedinfo', 'TheMovieDB')),
+        (os.path.join(ADDOND, 'script.extendedinfo', 'YouTube')),
+        (os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
+        (os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
+        (os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
+        (os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache'))]
 
 	delfiles = 0
 	excludes = ['meta_cache', 'archive_cache']
