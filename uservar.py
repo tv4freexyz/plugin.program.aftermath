@@ -97,9 +97,9 @@ AUTOINSTALL    = 'Yes'
 # Addon ID for the repository
 REPOID         = 'repository.aftermath'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOADDONXML   = 'https://raw.githubusercontent.com/drinfernoo/drinfernoo.github.io/master/zips/addons.xml'
+REPOADDONXML   = 'https://raw.githubusercontent.com/drinfernoo/drinfernoo.github.io/master/aftermath/zips/addons.xml'
 # Url to folder zip is located in
-REPOZIPURL     = 'https://raw.githubusercontent.com/drinfernoo/drinfernoo.github.io/master/zips/repository.aftermath/'
+REPOZIPURL     = 'https://raw.githubusercontent.com/drinfernoo/drinfernoo.github.io/master/aftermath/zips/repository.aftermath/'
 #########################################################
 
 #########################################################
