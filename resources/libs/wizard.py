@@ -501,7 +501,6 @@ def getCacheSize():
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'cache.meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'cache.providers.13.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
-		(os.path.join(ADDOND, 'plugin.video.seren', 'providers.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))]
 	cachelist = [
 		(ADDOND),
@@ -550,7 +549,6 @@ def getCacheSize():
 				files.append(os.path.join(ADDOND, 'plugin.video.gaia', 'meta.db'))
 			if INCLUDESEREN == 'true':
 				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db'))
-				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'providers.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))
 			if INCLUDE13CLOWNS == 'true': 
 				files.append(os.path.join(ADDOND, 'plugin.video.13clowns', 'cache.db'))
@@ -1390,7 +1388,6 @@ def backUpOptions(type, name=""):
 					(os.path.join(ADDOND, 'plugin.video.gaia', 'cache.db')),
 					(os.path.join(ADDOND, 'plugin.video.gaia', 'meta.db')),
 					(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
-					(os.path.join(ADDOND, 'plugin.video.seren', 'providers.db')),
 					(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))]
 
 	backup   = xbmc.translatePath(BACKUPLOCATION)
@@ -2304,7 +2301,6 @@ def clearCache(over=None):
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'cache.providers.13.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
-		(os.path.join(ADDOND, 'plugin.video.seren', 'providers.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))]
 
 	cachelist = [
@@ -2379,7 +2375,6 @@ def clearCache(over=None):
 			if INCLUDESEREN == 'true':
 				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))
-				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'providers.db'))
 			if INCLUDE13CLOWNS == 'true':
 				files.append(os.path.join(ADDOND, 'plugin.video.13clowns', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.13clowns', 'meta.5.db'))
