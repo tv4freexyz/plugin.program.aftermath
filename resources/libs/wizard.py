@@ -517,7 +517,9 @@ def getCacheSize():
         (os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
         (os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
         (os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
-        (os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache'))]
+        (os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache')),
+        (os.path.join(ADDOND, 'plugin.program.autocompletion', 'Google')),
+        (os.path.join(ADDOND, 'plugin.program.autocompletion', 'Bing'))]
 	if not PROFILEADDONDATA == ADDOND:
 		cachelist.append(os.path.join(PROFILEADDONDATA,'script.module.simple.downloader'))
 		cachelist.append(os.path.join(PROFILEADDONDATA,'plugin.video.itv','Images'))
@@ -2337,7 +2339,9 @@ def clearCache(over=None):
         (os.path.join(ADDOND, 'plugin.program.iagl', 'temp_iagl')),
         (os.path.join(ADDOND, 'plugin.program.iagl', 'list_cache')),
         (os.path.join(ADDOND, 'plugin.program.iarl', 'temp_iarl')),
-        (os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache'))]
+        (os.path.join(ADDOND, 'plugin.program.iarl', 'list_cache')),
+        (os.path.join(ADDOND, 'plugin.program.autocompletion', 'Google')),
+        (os.path.join(ADDOND, 'plugin.program.autocompletion', 'Bing'))]
 
 	delfiles = 0
 	excludes = ['meta_cache', 'archive_cache']
