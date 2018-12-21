@@ -128,7 +128,7 @@ THIRD3NAME     = ADDON.getSetting('wizard3name')
 THIRD3URL      = ADDON.getSetting('wizard3url')
 BACKUPLOCATION = ADDON.getSetting('path') if not ADDON.getSetting('path') == '' else 'special://home/'
 MYBUILDS       = os.path.join(BACKUPLOCATION, 'My_Builds', '')
-LOGFILES       = ['log', 'xbmc.old.log', 'kodi.log', 'kodi.old.log', 'spmc.log', 'spmc.old.log', 'tvmc.log', 'tvmc.old.log']
+LOGFILES       = ['log', 'xbmc.old.log', 'kodi.log', 'kodi.old.log', 'spmc.log', 'spmc.old.log', 'tvmc.log', 'tvmc.old.log', 'dmp']
 DEFAULTPLUGINS = ['metadata.album.universal', 'metadata.artists.universal', 'metadata.common.fanart.tv', 'metadata.common.imdb.com', 'metadata.common.musicbrainz.org', 'metadata.themoviedb.org', 'metadata.tvdb.com', 'service.xbmc.versioncheck']
 MAXWIZSIZE     = [100, 200, 300, 400, 500, 1000]
 MAXWIZLINES    = [100, 200, 300, 400, 500]
