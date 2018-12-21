@@ -501,7 +501,8 @@ def getCacheSize():
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'cache.meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'cache.providers.13.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
-		(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))]
+		(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db')),
+        (os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
 	cachelist = [
 		(ADDOND),
 		(os.path.join(HOME,'cache')),
@@ -1388,7 +1389,8 @@ def backUpOptions(type, name=""):
 					(os.path.join(ADDOND, 'plugin.video.gaia', 'cache.db')),
 					(os.path.join(ADDOND, 'plugin.video.gaia', 'meta.db')),
 					(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
-					(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))]
+					(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db')),
+                    (os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
 
 	backup   = xbmc.translatePath(BACKUPLOCATION)
 	mybuilds = xbmc.translatePath(MYBUILDS)
@@ -2301,7 +2303,8 @@ def clearCache(over=None):
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.zanni', 'cache.providers.13.db')),
 		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
-		(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))]
+		(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db')),
+        (os.path.join(ADDOND, 'script.module.simplecache', 'simplecache.db'))]
 
 	cachelist = [
 		(PROFILEADDONDATA),
