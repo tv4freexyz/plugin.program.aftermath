@@ -52,7 +52,6 @@ FAVOURITES       = os.path.join(USERDATA,  'favourites.xml')
 PROFILES         = os.path.join(USERDATA,  'profiles.xml')
 GUISETTINGS      = os.path.join(USERDATA,  'guisettings.xml')
 THUMBS           = os.path.join(USERDATA,  'Thumbnails')
-ANIMATEDGIFS           = os.path.join(ADDOND,  'script.module.metadatautils', 'animatedgifs')
 DATABASE         = os.path.join(USERDATA,  'Database')
 FANART           = os.path.join(PLUGIN,    'fanart.jpg')
 ICON             = os.path.join(PLUGIN,    'icon.png')
@@ -331,8 +330,8 @@ def viewBuild(name):
         addFile('%s was not found in the builds list.' % name, '', themeit=THEME3)
         return
     link = bf.replace('\n','').replace('\r','').replace('\t','').replace('gui=""', 'gui="http://"').replace('theme=""', 'theme="http://"')
-    match = re.compile('name="%s".+?ersion="(.+?)".+?rl="(.+?)".+?inor="(.+?)".+?ui="(.+?)".+?odi="(.+?)".+?heme="(.+?)".+?con="(.+?)".+?anart="(.+?)".+?review="(.+?)".+?dult="(.+?)".+?nfo="(.+?)".+?escription="(.+?)"' % name).findall(link)
-    for version, url, minor, gui, kodi, themefile, icon, fanart, preview, adult, info, description in match:
+    match = re.compile('name="%s".+?ersion="(.+?)".+?rl="(.+?)".+?ui="(.+?)".+?odi="(.+?)".+?heme="(.+?)".+?con="(.+?)".+?anart="(.+?)".+?review="(.+?)".+?dult="(.+?)".+?nfo="(.+?)".+?escription="(.+?)"' % name).findall(link)
+    for version, url, gui, kodi, themefile, icon, fanart, preview, adult, info, description in match:
         icon        = icon
         fanart      = fanart
         build       = '%s (v%s)' % (name, version)
@@ -2038,7 +2037,7 @@ def restoreextit(type):
 def buildInfo(name):
     if wiz.workingURL(BUILDFILE) == True:
         if wiz.checkBuild(name, 'url'):
-            name, version, url, minor, gui, kodi, theme, icon, fanart, preview, adult, info, description = wiz.checkBuild(name, 'all')
+            name, version, url, gui, kodi, theme, icon, fanart, preview, adult, info, description = wiz.checkBuild(name, 'all')
             adult = 'Yes' if adult.lower() == 'yes' else 'No'
             extend = False
             if not info == "http://":
@@ -2374,14 +2373,18 @@ def totalClean():
         clearThumb('total')
 
 def clearThumb(type=None):
+    thumb_locations = {THUMBS,
+        os.path.join(ADDOND, 'script.module.metadatautils','animatedgifs'),
+        os.path.join(ADDOND, 'script.extendedinfo', 'images')}
+    
     latest = wiz.latestDB('Textures')
     if not type == None: choice = 1
-    else: choice = DIALOG.yesno(ADDONTITLE, '[COLOR %s]Would you like to delete the %s and Thumbnails folder?' % (COLOR2, latest), "They will repopulate on the next startup[/COLOR]", nolabel='[B][COLOR red]Don\'t Delete[/COLOR][/B]', yeslabel='[B][COLOR springgreen]Delete Thumbs[/COLOR][/B]')
+    else: choice = DIALOG.yesno(ADDONTITLE, '[COLOR %s]Would you like to delete the %s and related thumbnail folders?' % (COLOR2, latest), "They will repopulate on the next startup[/COLOR]", nolabel='[B][COLOR red]Don\'t Delete[/COLOR][/B]', yeslabel='[B][COLOR springgreen]Delete Thumbs[/COLOR][/B]')
     if choice == 1:
         try: wiz.removeFile(os.join(DATABASE, latest))
         except: wiz.log('Failed to delete, Purging DB.'); wiz.purgeDb(latest)
-        wiz.removeFolder(THUMBS)
-        wiz.removeFolder(ANIMATEDGIFS)
+        for i in thumb_locations:
+            wiz.removeFolder(i)
         #if not type == 'total': wiz.killxbmc()
     else: wiz.log('Clear thumbnames cancelled')
     wiz.redoThumbs()
