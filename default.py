@@ -330,8 +330,8 @@ def viewBuild(name):
         addFile('%s was not found in the builds list.' % name, '', themeit=THEME3)
         return
     link = bf.replace('\n','').replace('\r','').replace('\t','').replace('gui=""', 'gui="http://"').replace('theme=""', 'theme="http://"')
-    match = re.compile('name="%s".+?ersion="(.+?)".+?rl="(.+?)".+?inor="(.+?)".+?ui="(.+?)".+?odi="(.+?)".+?heme="(.+?)".+?con="(.+?)".+?anart="(.+?)".+?review="(.+?)".+?dult="(.+?)".+?nfo="(.+?)".+?escription="(.+?)"' % name).findall(link)
-    for version, url, minor, gui, kodi, themefile, icon, fanart, preview, adult, info, description in match:
+    match = re.compile('name="%s".+?ersion="(.+?)".+?rl="(.+?)".+?ui="(.+?)".+?odi="(.+?)".+?heme="(.+?)".+?con="(.+?)".+?anart="(.+?)".+?review="(.+?)".+?dult="(.+?)".+?nfo="(.+?)".+?escription="(.+?)"' % name).findall(link)
+    for version, url, gui, kodi, themefile, icon, fanart, preview, adult, info, description in match:
         icon        = icon
         fanart      = fanart
         build       = '%s (v%s)' % (name, version)
@@ -2037,7 +2037,7 @@ def restoreextit(type):
 def buildInfo(name):
     if wiz.workingURL(BUILDFILE) == True:
         if wiz.checkBuild(name, 'url'):
-            name, version, url, minor, gui, kodi, theme, icon, fanart, preview, adult, info, description = wiz.checkBuild(name, 'all')
+            name, version, url, gui, kodi, theme, icon, fanart, preview, adult, info, description = wiz.checkBuild(name, 'all')
             adult = 'Yes' if adult.lower() == 'yes' else 'No'
             extend = False
             if not info == "http://":
