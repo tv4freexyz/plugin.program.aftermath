@@ -438,37 +438,10 @@ def apkScraper(name=""):
             except:
                 wiz.log("Error on: %s" % name)
         if x == 0: addFile("Error Kodi Scraper Is Currently Down.")
-    elif name == 'spmc':
-        spmcurl1 = 'https://github.com/koying/SPMC/releases'
-        url1 = wiz.openURL(spmcurl1).replace('\n', '').replace('\r', '').replace('\t', '')
-        x = 0
-        match1 = re.compile('<div.+?lass="release-body.+?div class="release-header".+?a href=.+?>(.+?)</a>.+?ul class="release-downloads">(.+?)</ul>.+?/div>').findall(url1)
-
-        addFile("Official SPMC Apk\'s", themeit=THEME1)
-
-        for name, urls in match1:
-            tempurl = ''
-            match2 = re.compile('<li>.+?<a href="(.+?)" rel="nofollow">.+?<small class="text-gray float-right">(.+?)</small>.+?strong>(.+?)</strong>.+?</a>.+?</li>').findall(urls)
-            for apkurl, apksize, apkname in match2:
-                if apkname.find('armeabi') == -1: continue
-                if apkname.find('launcher') > -1: continue
-                tempurl = urljoin('https://github.com', apkurl)
-                break
-            if tempurl == '': continue
-            try:
-                name = "SPMC %s" % name
-                title = "[COLOR %s]%s[/COLOR] [COLOR %s]%s[/COLOR]" % (COLOR1, name, COLOR2, apksize.replace(' ', ''))
-                download = tempurl
-                addFile(title, 'apkinstall', name, download)
-                x += 1
-            except Exception, e:
-                wiz.log("Error on: %s / %s" % (name, str(e)))
-        if x == 0: addFile("Error SPMC Scraper Is Currently Down.")
 
 def apkMenu(name=None, url=None):
     if url == None:
         addDir ('Official Kodi Apk\'s', 'apkscrape', 'kodi', icon=ICONAPK, themeit=THEME1)
-        addDir ('Official SPMC Apk\'s', 'apkscrape', 'spmc', icon=ICONAPK, themeit=THEME1)
         if HIDESPACERS == 'No': addFile(wiz.sep(), '', themeit=THEME3)
     if not APKFILE == 'http://':
         if url == None:
