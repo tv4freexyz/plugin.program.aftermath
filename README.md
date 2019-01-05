@@ -3,8 +3,7 @@ Aftermath Wizard
 
 Aftermath Wizard was created to help the Kodi community out and help get rid of the broken personal wizards that are floating around. As this is a work in progress, I would highly recommend the use of a repository, but if you prefer not to, there is a built-in auto-updater.
 
-To Learn how to edit/custimize this wizard for your own usage Please read the wiki
-https://github.com/drinfernoo/plugin.program.aftermath/wiki
+For more information on how to edit/customize this wizard for your own usage, please read [the wiki](https://github.com/drinfernoo/plugin.program.aftermath/wiki).
 
 Currently, this version of the wizard supports:
 
