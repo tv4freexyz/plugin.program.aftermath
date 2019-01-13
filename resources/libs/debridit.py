@@ -145,7 +145,7 @@ DEBRIDID = {
 		'file'     : os.path.join(REALFOLD, 'pmrurl_debrid'),
 		'settings' : os.path.join(ADDOND, 'script.module.resolveurl', 'settings.xml'),
 		'default'  : 'PremiumizeMeResolver_username',
-		'data'     : ['PremiumizeMeResolver_enabled', 'PremiumizeMeResolver_login', 'PremiumizeMeResolver_password', 'PremiumizeMeResolver_priority', 'PremiumizeMeResolver_use_https', 'PremiumizeMeResolver_username'],
+		'data'     : ['PremiumizeMeResolver_enabled', 'PremiumizeMeResolver_priority', 'PremiumizeMeResolver_token'],
 		'activate' : ''}
 }
 
