@@ -284,11 +284,12 @@ def addonUpdates(do=None):
 def checkBuild(name, ret):
 	if not workingURL(BUILDFILE) == True: return False
 	link = openURL(BUILDFILE).replace('\n','').replace('\r','').replace('\t','').replace('gui=""', 'gui="http://"').replace('theme=""', 'theme="http://"')
-	match = re.compile('name="%s".+?ersion="(.+?)".+?rl="(.+?)".+?ui="(.+?)".+?odi="(.+?)".+?heme="(.+?)".+?con="(.+?)".+?anart="(.+?)".+?review="(.+?)".+?dult="(.+?)".+?nfo="(.+?)".+?escription="(.+?)"' % name).findall(link)
+	match = re.compile('name="%s".+?ersion="(.+?)".+?rl="(.+?)".+?inor="(.+?)".+?ui="(.+?)".+?odi="(.+?)".+?heme="(.+?)".+?con="(.+?)".+?anart="(.+?)".+?review="(.+?)".+?dult="(.+?)".+?nfo="(.+?)".+?escription="(.+?)"' % name).findall(link)
 	if len(match) > 0:
-		for version, url, gui, kodi, theme, icon, fanart, preview, adult, info, description in match:
+		for version, url, minor, gui, kodi, theme, icon, fanart, preview, adult, info, description in match:
 			if ret   == 'version':       return version
 			elif ret == 'url':           return url
+			elif ret == 'minor':         return minor
 			elif ret == 'gui':           return gui
 			elif ret == 'kodi':          return kodi
 			elif ret == 'theme':         return theme
@@ -298,7 +299,7 @@ def checkBuild(name, ret):
 			elif ret == 'adult':         return adult
 			elif ret == 'description':   return description
 			elif ret == 'info':          return info
-			elif ret == 'all':           return name, version, url, gui, kodi, theme, icon, fanart, preview, adult, info, description
+			elif ret == 'all':           return name, version, url, minor, gui, kodi, theme, icon, fanart, preview, adult, info, description
 	else: return False
 
 def checkTheme(name, theme, ret):
@@ -1077,6 +1078,7 @@ def convertText():
 				writing += 'name="%s"\n' % name
 				writing += 'version="%s"\n' % version
 				writing += 'url="%s"\n' % url
+				writing += 'minor="http://"\n'
 				writing += 'gui="%s"\n' % gui
 				writing += 'kodi="%s"\n' % kodi
 				writing += 'theme="%s"\n' % theme
@@ -1111,6 +1113,7 @@ def convertText():
 				writing += 'name="%s"\n' % name
 				writing += 'version="%s"\n' % version
 				writing += 'url="%s"\n' % url
+				writing += 'minor="http://"\n'
 				writing += 'gui="%s"\n' % gui
 				writing += 'kodi="%s"\n' % kodi
 				writing += 'theme="%s"\n' % theme
