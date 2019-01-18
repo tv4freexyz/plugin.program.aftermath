@@ -1263,7 +1263,10 @@ def asciiCheck(use=None, over=False):
 			DP.update(prog2,"[COLOR %s]Checking for non ASCII files" % COLOR2,'[COLOR %s]%s[/COLOR]' % (COLOR1, d), 'Please Wait[/COLOR]')
 			try:
 				file.encode('ascii')
+			except UnicodeEncodeError:
+				wiz.log("[ASCII Check] Illegal character found in file: {0}".format(item.filename))
 			except UnicodeDecodeError:
+				wiz.log("[ASCII Check] Illegal character found in file: {0}".format(item.filename))
 				badfile = os.path.join(base, file)
 				if yes:
 					try:
