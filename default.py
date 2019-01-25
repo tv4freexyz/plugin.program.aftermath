@@ -1407,7 +1407,7 @@ def changeFeq():
         wiz.LogNotify('[COLOR %s]Auto Clean Up[/COLOR]' % COLOR1, '[COLOR %s]Fequency Now %s[/COLOR]' % (COLOR2, feq[change]))
 
 def developer():
-    addFile('Convert Text Files to 0.1.7',         'converttext',           themeit=THEME1)
+    # addFile('Convert Text Files to 0.1.7',         'converttext',           themeit=THEME1)
     addFile('Create QR Code',                      'createqr',              themeit=THEME1)
     addFile('Test Notifications',                  'testnotify',            themeit=THEME1)
     addFile('Test Update',                         'testupdate',            themeit=THEME1)
