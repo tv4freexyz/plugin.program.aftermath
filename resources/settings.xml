@@ -44,7 +44,7 @@
 		<setting id="showmaint" type="bool" label="Show All Maintenance Sections" default="false"/>
 		<setting type="lsep" label="Backup Location: "/>
 		<setting id="path" type="folder" label="Choose Backup Storage Location" default=""/>
-		<setting id="rompath" type="folder" label="Choose Roms Extract Location Location" default=""/>
+		<!--<setting id="rompath" type="folder" label="Choose Roms Extract Location Location" default=""/>-->
 		<setting type="lsep" label="Auto Cleanup On Startup:"/>
 		<setting id="autoclean" type="bool" label="Enable Auto Clean" default="true"/>
 		<setting id="clearcache" type="bool" label="Clear Cache on Startup" default="true" enable="!eq(-1,false)"/>
