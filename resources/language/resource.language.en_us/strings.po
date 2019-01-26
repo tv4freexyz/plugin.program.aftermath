@@ -1,0 +1,38 @@
+# Kodi Media Center language file
+# Addon Name: Aftermath Wizard
+# Addon id: plugin.program.aftermath
+# Addon Provider: drinfernoo
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Aftermath Wizard\n"
+"Report-Msgid-Bugs-To: https://www.github.com/drinfernoo/plugin.program.aftermath\n"
+"POT-Creation-Date: 2019-01-25\n"
+"PO-Revision-Date: 2019-01-25\n"
+"Last-Translator: drinfernoo\n"
+"Language-Team: https://www.github.com/drinfernoo/plugin.program.aftermath\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Build Options"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Maintenance"
+msgstr ""
+
+msgctxt "#33002"
+msgid "Install Settings"
+msgstr ""
+
+msgctxt "#33003"
+msgid "View Settings"
+msgstr ""
+
+msgctxt "#33004"
+msgid "Logging Settings"
+msgstr ""

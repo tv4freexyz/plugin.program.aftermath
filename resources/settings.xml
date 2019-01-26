@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
-	<category label="Build Options">
+	<category label="33000">
 		<setting type="lsep" label="Current Build:"/>
 		<setting id="buildname" type="text" label="Installed Build: " enable="false" default=""/>
 		<setting id="buildversion" type="text" label="Installed Version: " enable="false" default=""/>
@@ -36,7 +36,7 @@
 		<setting id="pvrclient" type="text" label="Enabled PVR:" enable="false" default="" visible="false"/>
 	</category>
 
-	<category label="Maintenance">
+	<category label="33001">
 		<setting type="lsep" label="Upload Log: "/>
 		<!-- <setting id="email" type="text" label="E-Mail Address" /> -->
 		<setting id="oldlog" type="bool" label="Include Kodi.Old.Log" default="false"/>
@@ -65,7 +65,7 @@
         <setting id="includezanni" type="bool" label="Include Zanni Cache DB: " default="true" enable="eq(-7,false)" visible="System.HasAddon(plugin.video.zanni)"/>
 	</category>
 
-	<category label="Install Settings">
+	<category label="33002">
         <setting type="lsep" label="Save Data When Installing Build:"/>
         <setting id="keeptrakt" type="bool" label="Keep My Trakt Data" default="false"/>
         <setting id="traktlastsave" type="text" label="Last Time Trakt Data Saved:" visible="!eq(-1, false)" enable="false"/>
@@ -91,7 +91,7 @@
 		<setting id="wizard3url" type="text" label="Wizard 3 URL: " enable="true" visible="!eq(-6,false)" default=""/>
 	</category>
 
-	<category label="View Settings">
+	<category label="33003">
 		<setting id="developer" type="bool" label="Show Developer Menu: " enable="true" default=""/>
 		<setting id="adult" type="bool" label="Show Adult Addons: " enable="true" default="false"/>
 		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
@@ -102,7 +102,7 @@
 		<setting id="notedismiss" type="bool" label="Dismiss or Remind me later" visible="false" />
 	</category>
 
-	<category label="Logging Settings">
+	<category label="33004">
 		<setting type="lsep" label="Event Logging in the Wizard:"/>
 		<setting id="addon_debug" type="bool" label="Enable Wizard Logging:" default="true"/>
 		<setting id="debuglevel" type="enum" label="What level would you like the wizard to log?" enable="!eq(-1,false)" values="No Logging|Normal Logging|Full Logging" default="2"/>
