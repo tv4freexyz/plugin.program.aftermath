@@ -918,6 +918,7 @@ def ebi(proc):
 
 def refresh():
     ebi('Container.Refresh()')
+    sys.exit();
 
 def splitNotify(notify):
     link = openURL(notify).replace('\r','').replace('\t','').replace('\n', '[CR]')
