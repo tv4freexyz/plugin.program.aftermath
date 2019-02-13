@@ -11,14 +11,14 @@ ART            = os.path.join(PATH, 'resources', 'art')
 ### User Edit Variables #################################
 #########################################################
 ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
-ADDONTITLE     = '[B][COLOR dodgerblue]Aftermath[/COLOR][/B] Wizard'
-BUILDERNAME    = 'Aftermath'
-EXCLUDES       = [ADDON_ID, 'repository.aftermath']
+ADDONTITLE     = '[B][COLOR dodgerblue]Utopia[/COLOR][/B] Wizard'
+BUILDERNAME    = 'TV4Freexyz'
+EXCLUDES       = [ADDON_ID, 'repository.utopia']
 # Enable/Disable the text file caching with 'Yes' or 'No' and age being how often it rechecks in minutes
 CACHETEXT      = 'Yes'
 CACHEAGE       = 30
 # Text File with build info in it.
-BUILDFILE      = 'http://'
+BUILDFILE      = 'http://utopia.tv4free.xyz/files/autobuilds.txt'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK    = 0
@@ -40,7 +40,7 @@ ADVANCEDFILE   = 'http://'
 # folder of the wizard then use os.path.join(ART, 'imagename.png')
 # do not place quotes around os.path.join
 # Example:  ICONMAINT     = os.path.join(ART, 'mainticon.png')
-#           ICONSETTINGS  = 'http://aftermathwizard.net/repo/wizard/settings.png'
+#           ICONSETTINGS  = 'http://Utopiawizard.net/repo/wizard/settings.png'
 # Leave as http:// for default icon
 ICONBUILDS     = os.path.join(ART, 'builds.png')
 ICONMAINT      = os.path.join(ART, 'maintenance.png')
@@ -64,7 +64,7 @@ SPACER         = '='
 COLOR1         = 'dodgerblue'
 COLOR2         = 'white'
 # Primary menu items   / %s is the menu item and is required
-THEME1         = '[COLOR '+COLOR1+'][B][I]([COLOR '+COLOR2+']Aftermath[/COLOR])[/I][/B][/COLOR] [COLOR '+COLOR2+']%s[/COLOR]'
+THEME1         = '[COLOR '+COLOR1+'][B][I]([COLOR '+COLOR2+']Utopia[/COLOR])[/I][/B][/COLOR] [COLOR '+COLOR2+']%s[/COLOR]'
 # Build Names          / %s is the menu item and is required
 THEME2         = '[COLOR '+COLOR2+']%s[/COLOR]'
 # Alternate items      / %s is the menu item and is required
@@ -101,11 +101,11 @@ WIZARDFILE     = BUILDFILE
 # Enable Auto Install 'Yes' or 'No'
 AUTOINSTALL    = 'Yes'
 # Addon ID for the repository
-REPOID         = 'repository.aftermath'
+REPOID         = 'repository.utopia'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOADDONXML   = 'https://raw.githubusercontent.com/drinfernoo/repository.aftermath/master/zips/addons.xml'
+REPOADDONXML   = 'https://raw.githubusercontent.com/tv4freexyz/repository.utopia/master/zips/addons.xml'
 # Url to folder zip is located in
-REPOZIPURL     = 'https://raw.githubusercontent.com/drinfernoo/repository.aftermath/master/zips/repository.aftermath/'
+REPOZIPURL     = 'https://raw.githubusercontent.com/tv4freexyz/repository.utopia/master/zips/repository.utopia'
 #########################################################
 
 #########################################################
@@ -114,12 +114,12 @@ REPOZIPURL     = 'https://raw.githubusercontent.com/drinfernoo/repository.afterm
 # Enable Notification screen Yes or No
 ENABLE         = 'Yes'
 # Url to notification file
-NOTIFICATION   = 'http://'
+NOTIFICATION   = 'http://utopia.tv4free.xyz/files/notify.txt'
 # Use either 'Text' or 'Image'
 HEADERTYPE     = 'Text'
 # Font size of header
 FONTHEADER     = 'Font14'
-HEADERMESSAGE  = '[B][COLOR dodgerblue]Aftermath[/COLOR][/B] Wizard'
+HEADERMESSAGE  = '[B][COLOR dodgerblue]Utopia[/COLOR][/B] Wizard'
 # url to image if using Image 424x180
 HEADERIMAGE    = 'http://'
 # Font for Notification Window
